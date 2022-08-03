@@ -10,6 +10,7 @@ pipeline{
         stage("Maven Build"){
             steps{
                 sh "mvn clean install package"
+                sh "mvn -f path/*.war/pom.xml <clean install package>
             }
         }
         stage("deploy-dev"){
